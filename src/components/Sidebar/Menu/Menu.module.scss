@@ -27,7 +27,10 @@
 
         &--active {
           color: $color-base;
-          border-bottom: 1px solid $color-base;
+          // background: #DCFCF6;
+          background: aliceblue;
+          padding: 7px 12px;
+          border-radius: 5px;
         }
 
       }

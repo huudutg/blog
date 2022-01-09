@@ -9,7 +9,7 @@ type Props = {
     bio: string,
     photo: string
   },
-  isIndex: ?boolean
+  isIndex?: boolean
 };
 
 const Author = ({ author, isIndex }: Props) => (
@@ -18,8 +18,8 @@ const Author = ({ author, isIndex }: Props) => (
       <img
         src={withPrefix(author.photo)}
         className={styles['author__photo']}
-        width="75"
-        height="75"
+        width="110"
+        height="110"
         alt={author.name}
       />
     </Link>

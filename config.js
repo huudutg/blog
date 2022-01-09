@@ -12,7 +12,7 @@ module.exports = {
   useKatex: false,
   menu: [
     {
-      label: 'Articles',
+      label: 'Blogs',
       path: '/'
     },
     {
@@ -20,14 +20,14 @@ module.exports = {
       path: '/pages/about'
     },
     {
-      label: 'Contact me',
-      path: '/pages/contacts'
+      label: 'Categories',
+      path: '/categories'
     }
   ],
   author: {
-    name: 'John Doe',
-    photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    name: 'I am not Dự',
+    photo: '/avatar.png',
+    bio: 'Backend engineer at Fossil.',
     contacts: {
       email: '',
       facebook: '#',
@@ -42,9 +42,9 @@ module.exports = {
       gitlab: '',
       weibo: '',
       codepen: '',
-      youtube: '',
+      youtube: '#',
       soundcloud: '',
-      medium: '',
+      medium: '#',
     }
   }
 };
