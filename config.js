@@ -3,8 +3,8 @@
 module.exports = {
   url: 'https://lumen.netlify.com',
   pathPrefix: '/',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  title: 'Not Dự blog',
+  subtitle: 'I create this blog to learn, share my opinions and knowledge, and reserve my memories.',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
@@ -25,26 +25,26 @@ module.exports = {
     }
   ],
   author: {
-    name: 'I am not Dự',
+    name: 'Definitely not Dự',
     photo: '/avatar.png',
-    bio: 'Backend engineer at Fossil.',
+    bio: 'Software engineering at Fossil. \n I am not here, mostly in the Cloud.',
     contacts: {
       email: '',
-      facebook: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
+      facebook: '',
+      telegram: '',
+      twitter: 'huudutg',
+      github: 'huudutg',
       rss: '',
       vkontakte: '',
-      linkedin: '#',
-      instagram: '#',
+      linkedin: 'huudutg',
+      instagram: '',
       line: '',
       gitlab: '',
       weibo: '',
       codepen: '',
-      youtube: '#',
+      youtube: 'UCc02nJGgKGQbQMe1AhUZwLg',
       soundcloud: '',
-      medium: '#',
+      medium: '',
     }
   }
 };

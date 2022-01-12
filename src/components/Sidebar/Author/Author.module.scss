@@ -30,6 +30,7 @@
   }
 
   &__subtitle {
+    white-space: pre-line;
     color: $color-gray;
     @include line-height(1);
     @include margin-bottom(1)

@@ -41,6 +41,7 @@
     "@sentry/gatsby": "^6.11.0",
     "@sentry/tracing": "^6.11.0",
     "@types/react-helmet": "^6.1.5",
+    "array-move": "^4.0.0",
     "bluebird": "^3.7.2",
     "classnames": "^2.3.1",
     "codecov": "^3.8.3",

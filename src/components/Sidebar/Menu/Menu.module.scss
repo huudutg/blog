@@ -1,5 +1,5 @@
-@import '../../../assets/scss/variables';
-@import '../../../assets/scss/mixins';
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
 
 .menu {
   @include margin-bottom(1);
@@ -8,7 +8,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
-
+    margin-left: 20px;
     &-item {
       padding: 0;
       margin: 10px 0;
@@ -32,11 +32,7 @@
           padding: 7px 12px;
           border-radius: 5px;
         }
-
       }
-
     }
-
   }
-
 }
