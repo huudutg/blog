@@ -65,7 +65,9 @@ module.exports = {
               date: edge.node.frontmatter.date,
               url: site.siteMetadata.site_url + edge.node.fields.slug,
               guid: site.siteMetadata.site_url + edge.node.fields.slug,
-              custom_elements: [{ 'content:encoded': edge.node.html }]
+              custom_elements: [
+                { 'content:encoded': edge.node.html },
+              ]
             }))
           ),
           query: `
@@ -87,6 +89,7 @@ module.exports = {
                         template
                         draft
                         description
+                        thumbnail
                       }
                     }
                   }
@@ -102,7 +105,13 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          'gatsby-remark-relative-images',
+          // 'gatsby-remark-relative-images',
+          {
+            resolve: 'gatsby-remark-relative-images',
+            options: {
+              include: ['thumbnail'],
+            },
+          },
           {
             resolve: 'gatsby-remark-katex',
             options: {
