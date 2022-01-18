@@ -22,11 +22,19 @@ module.exports = {
     {
       label: 'Categories',
       path: '/categories'
-    }
+    },
+    {
+      label: 'Unsplash',
+      path: 'https://unsplash.com/@huudutg'
+    },
+    {
+      label: 'Buy Me a Coffee',
+      path: 'https://ko-fi.com/huudutg'
+    },
   ],
   author: {
     name: 'Definitely not Dự',
-    photo: '/avatar.png',
+    photo: '/ava11.jpeg',
     bio: 'Software engineering at Fossil. \n I am not here, mostly in the Cloud.',
     contacts: {
       email: '',
