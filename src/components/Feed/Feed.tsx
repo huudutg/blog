@@ -13,7 +13,7 @@ const Feed = ({ edges }: Props) => {
 
   const calculateReadingTime = (text: string) => {
     const wpm = 300;
-    const words = text.trim().split(/\s+/).length;
+    const words = text ? text.trim().split(/\s+/).length : 1000;
     return Math.ceil(words / wpm);
   };
   return (
