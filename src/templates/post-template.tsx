@@ -6,10 +6,15 @@ import Post from "../components/Post";
 import { useSiteMetadata } from "../hooks";
 import type { MarkdownRemark } from "../types";
 
+type PageContext = {
+  readingTime: string
+}
+
 type Props = {
   data: {
     markdownRemark: MarkdownRemark;
   };
+  pageContext: PageContext;
 };
 
 const PostTemplate = ({ data }: Props) => {
@@ -22,7 +27,7 @@ const PostTemplate = ({ data }: Props) => {
   } = frontmatter;
   const metaDescription = postDescription || siteSubtitle;
   const socialImageUrl = socialImage;
-
+  console.log("%c data", "color: blue;", data);
   return (
     <Layout
       title={`${postTitle} - ${siteTitle}`}

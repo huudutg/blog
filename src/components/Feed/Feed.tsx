@@ -10,6 +10,12 @@ type Props = {
 
 const Feed = ({ edges }: Props) => {
   console.log("%c edges", "color: blue;", edges);
+
+  const calculateReadingTime = (text: string) => {
+    const wpm = 300;
+    const words = text.trim().split(/\s+/).length;
+    return Math.ceil(words / wpm);
+  };
   return (
     <div className={styles["feed"]}>
       {edges.map((edge) => (
@@ -51,7 +57,7 @@ const Feed = ({ edges }: Props) => {
                 </div>
                 <div className={styles["info__wrap"]}>
                   <span className={styles["info__wrap-content"]}>
-                    5 min read
+                    {calculateReadingTime(edge.node.html)} min read
                   </span>
                 </div>
                 <div className={styles["info__dot"]}>
