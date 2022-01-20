@@ -34,7 +34,7 @@ module.exports = {
   ],
   author: {
     name: 'Definitely not Dự',
-    photo: '/ava11.jpeg',
+    photo: '/ava11nho.jpeg',
     bio: 'Software engineering at Fossil. \n I am not here, mostly in the Cloud.',
     contacts: {
       email: '',

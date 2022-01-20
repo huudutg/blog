@@ -31,7 +31,8 @@
 
   &__subtitle {
     white-space: pre-line;
-    color: $color-gray;
+    // color: $color-gray;
+    color: black;
     @include line-height(1);
     @include margin-bottom(1)
   }

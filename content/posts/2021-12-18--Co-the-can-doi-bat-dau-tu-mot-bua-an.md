@@ -1,6 +1,6 @@
 ---
 title: Cơ thể cân đối bắt đầu từ một bữa ăn (phần 1)
-date: "2021-12-18T23:46:37.121Z"
+date: "2021-12-18"
 template: "post"
 draft: false
 slug: "co-the-can-doi-bat-dau-tu-mot-bua-an"
@@ -9,8 +9,8 @@ tags:
   - "Food"
   - "Healthy"
 description: "\"Nằm viện 72 ngày, bán cả 2 căn biệt thự ở trung tâm thành phố, tôi mới nhận ra nếu còn khỏe mạnh, dù chỉ với hai bàn tay trắng, tôi đã là tỷ phú triệu đô.\""
-socialImage: "/media/image-2.jpg"
-thumbnail: https://gymme.vn/wp-content/uploads/2020/08/eat-clean-tim-khoe.jpg
+socialImage: "/media/2021/12/fast-food.png"
+thumbnail: "media/2021/12/fast-food.png"
 ---
 
 Hôm nọ, mình có đọc qua một bài báo đề cập về chủ đề sức khỏe - một chủ đề mà mình khá quan tâm. Bài viết có một câu chia sẻ rất tâm đắc, rằng **"Nằm viện 72 ngày, bán cả 2 căn biệt thự ở trung tâm thành phố, tôi mới nhận ra nếu còn khỏe mạnh, dù chỉ với hai bàn tay trắng, tôi đã là tỷ phú triệu đô"**. Câu chữ ấy giúp mình vững tin hơn về những thứ mà mình đang theo đuổi đồng thời nó cũng là nguồn động lực thôi thúc mình cho ra lò bài viết này. Hy vọng với những thứ mà mình chia sẻ sẽ phần nào đó giúp anh em nhà nhện chúng ta có thêm một góc nhìn khác về bữa ăn hàng ngày hoặc ít nhất là có thêm một tí cảm hứng để bắt tay vào xây dựng bữa ăn phù hợp với mình hơn.

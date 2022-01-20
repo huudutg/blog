@@ -1,6 +1,6 @@
 ---
 title: Cơ thể cân đối bắt đầu từ một bữa ăn (phần 2)
-date: "2021-12-18T23:46:37.121Z"
+date: "2021-12-19"
 template: "post"
 draft: false
 slug: "co-the-can-doi-bat-dau-tu-mot-bua-an-p2"
@@ -10,7 +10,7 @@ tags:
   - "Healthy"
 description: Phần 2 - 5 tiêu chí ăn đúng
 socialImage: "/media/image-2.jpg"
-thumbnail: https://gymme.vn/wp-content/uploads/2020/08/eat-clean-tim-khoe.jpg
+thumbnail: "media/2021/12/fast-food.png"
 ---
 
 Ở phần trước, chúng ta đã đi qua các nhóm chất dinh dưỡng cần thiết cho cơ thể cũng như 3 tiêu chí ăn đủ, phần 2 này mình sẽ bàn về 5 tiêu chí ăn đúng.

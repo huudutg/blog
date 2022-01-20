@@ -21,7 +21,8 @@
 
       &--disable {
         pointer-events: none;
-        color: lighten($color-gray, 20%);
+        // color: lighten($color-gray, 20%);
+        color: black;
       }
 
     }
@@ -44,7 +45,8 @@
 
       &--disable {
         pointer-events: none;
-        color: lighten($color-gray, 20%);
+        // color: lighten($color-gray, 20%);
+        color: black;
       }
 
     }
