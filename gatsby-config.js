@@ -250,5 +250,11 @@ module.exports = {
         allExtensions: true, // defaults to false
       },
     },
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: 'src/utils/typography',
+      },
+    },
   ]
 };

@@ -46,6 +46,7 @@
     "classnames": "^2.3.1",
     "codecov": "^3.8.3",
     "gatsby": "^2.32.13",
+    "gatsby-design-tokens": "^4.5.0",
     "gatsby-link": "^2.11.0",
     "gatsby-plugin-catch-links": "^2.10.0",
     "gatsby-plugin-feed": "^2.13.1",
@@ -60,6 +61,7 @@
     "gatsby-plugin-sass": "^3.2.0",
     "gatsby-plugin-sharp": "^2.14.4",
     "gatsby-plugin-sitemap": "^2.12.0",
+    "gatsby-plugin-typography": "^4.5.0",
     "gatsby-remark-autolink-headers": "^2.11.0",
     "gatsby-remark-copy-linked-files": "^2.10.0",
     "gatsby-remark-external-links": "0.0.4",
@@ -82,7 +84,10 @@
     "react": "^17.0.2",
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-typography": "^0.16.20",
+    "typography": "^0.16.21",
+    "typography-plugin-code": "^0.16.20"
   },
   "devDependencies": {
     "@babel/core": "7.15.8",
