@@ -78,6 +78,8 @@ const Feed = ({ edges }: Props) => {
               className={styles["feed__item-wrap-img"]}
             >
               <img
+                height="135"
+                width="216"
                 loading="lazy"
                 src={
                   edge.node.frontmatter.thumbnail
