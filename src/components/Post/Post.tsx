@@ -21,10 +21,11 @@ const Post = ({ post }: Props) => {
 
   return (
     <div className={styles["post"]}>
-      <Link className={styles["post__home-button"]} to="/">
-        Not Dự Blog
-      </Link>
-
+      <div className={styles["post__button"]}>
+        <Link className={styles["post__button-btn56"]} to="/">
+          Not Dự Blog
+        </Link>
+      </div>
       <div className={styles["post__content"]}>
         <Content
           body={html}

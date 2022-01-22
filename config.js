@@ -3,7 +3,7 @@
 module.exports = {
   url: 'https://lumen.netlify.com',
   pathPrefix: '/',
-  title: 'Not Dự blog',
+  title: 'Not Dự Blog',
   subtitle: 'I create this blog to learn, share my opinions and knowledge, and reserve my memories.',
   copyright: '© All rights reserved.',
   disqusShortname: '',
@@ -34,14 +34,14 @@ module.exports = {
   ],
   author: {
     name: 'Definitely not Dự',
-    photo: '/ava11nho.jpeg',
+    photo: '/avatar.png',
     bio: 'Software engineering at Fossil. \n I am not here, mostly in the Cloud.',
     contacts: {
       email: '',
       facebook: '',
       telegram: '',
       twitter: 'huudutg',
-      github: 'huudutg',
+      github: 'notdu',
       rss: '',
       vkontakte: '',
       linkedin: 'huudutg',
