@@ -25,11 +25,11 @@ module.exports = {
     },
     {
       label: 'Unsplash',
-      path: 'https://unsplash.com/@huudutg'
+      path: 'https://unsplash.com/@notdu'
     },
     {
       label: 'Buy Me a Coffee',
-      path: 'https://ko-fi.com/huudutg'
+      path: 'https://ko-fi.com/notdu'
     },
   ],
   author: {
