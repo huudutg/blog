@@ -1,3 +1,4 @@
+@use "sass:math";
 @import '../../../assets/scss/variables';
 @import '../../../assets/scss/mixins';
 
@@ -54,14 +55,21 @@
       text-decoration: underline
     }
 
-    // & * {
-    //   max-width: $layout-post-width;
-    //   margin-left: auto;
-    //   margin-right: auto
-    // }
+    & * {
+      max-width: $layout-post-width;
+      margin-left: auto;
+      margin-right: auto
+    }
 
     & img {
       max-width: 100%;
+    }
+
+    & td {
+      max-width: math.div($layout-post-width, 2);
+    }
+    & code {
+      font-size: 85%;
     }
 
   }

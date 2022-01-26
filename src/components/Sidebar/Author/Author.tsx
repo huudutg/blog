@@ -14,7 +14,7 @@ type Props = {
 
 const Author = ({ author, isIndex }: Props) => (
   <div className={styles["author"]}>
-    <Link to="/">
+    {/* <Link to="/">
       <img
         src={withPrefix(author.photo)}
         className={styles["author__photo"]}
@@ -22,7 +22,20 @@ const Author = ({ author, isIndex }: Props) => (
         height="110"
         alt={author.name}
       />
-    </Link>
+    </Link> */}
+    <div className={styles["container"]}>
+      <div className={styles["author2"]}>
+        <a href="/">
+          <img
+            width="110"
+            height="110"
+            src={withPrefix(author.photo)}
+            // src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/751678/skytsunami.png"
+            alt="Skytsunami"
+          />
+        </a>
+      </div>
+    </div>
 
     {isIndex === true ? (
       <h1 className={styles["author__title"]}>

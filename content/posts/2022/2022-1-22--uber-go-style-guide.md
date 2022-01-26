@@ -302,6 +302,158 @@ return p.count
 </td></tr>
 </tbody></table>
 
+### Bắt đầu Enums với 1
+Bạn nên bắt đầu enum với 1, trừ khi biến của bạn có giá trị mặc định là 0.
+<table>
+<thead><tr><th>Bad</th><th>Good</th></tr></thead>
+<tbody>
+<tr><td>
+
+```go
+type Operation int
+const (
+  Add Operation = iota
+  Subtract
+  Multiply
+)
+// Add=0, Subtract=1, Multiply=2
+```
+
+</td><td>
+
+```go
+type Operation int
+const (
+  Add Operation = iota + 1
+  Subtract
+  Multiply
+)
+// Add=1, Subtract=2, Multiply=3
+```
+
+</td></tr>
+</tbody></table>
+
+Ví dụ trường hợp enum bắt đầu từ 0:
+```go
+type OS int
+const (
+  Unknown OS = iota
+  Android
+  IOS
+)
+// Unknown=0, Android=1, IOS=2
+```
+
+### Errors
+Tùy vào mục đích và tình huống sử dụng, bạn nên cân nhắc các kiểu error và dùng cho phù hợp:
+- Nếu bạn cần xử lý một error cụ thể nào đó, chúng ta cần phải khai báo một top-level error hoặc một custom type error và sử dụng các hàm [`errors.Is`] hoặc [`errors.As`].
+- Nếu error message là một static string, bạn có thể dùng `errors.New`, còn nếu là dynamic string thì dùng  `fmt.Errorf` hoặc một custom error.
+
+[`errors.Is`]: https://golang.org/pkg/errors/#Is
+[`errors.As`]: https://golang.org/pkg/errors/#As
+
+| Error matching? | Error Message | Guidance                            |
+|-----------------|---------------|-------------------------------------|
+| No              | static        | [`errors.New`]                      |
+| No              | dynamic       | [`fmt.Errorf`]                      |
+| Yes             | static        | top-level `var` with [`errors.New`] |
+| Yes             | dynamic       | custom `error` type                 |
+
+[`errors.New`]: https://golang.org/pkg/errors/#New
+[`fmt.Errorf`]: https://golang.org/pkg/fmt/#Errorf
+
+Ví dụ, tạo một error với [`errors.New`] và static string, sau đó export error này như một biến và dùng `errors.Is` để bắt nó và xử lý.
+
+<table>
+<thead><tr><th>No error matching</th><th>Error matching</th></tr></thead>
+<tbody>
+<tr><td>
+
+```go
+// package foo
+func Open() error {
+  return errors.New("could not open")
+}
+// package bar
+if err := foo.Open(); err != nil {
+  // Can't handle the error.
+  panic("unknown error")
+}
+```
+
+</td><td>
+
+```go
+// package foo
+var ErrCouldNotOpen = errors.New("could not open")
+func Open() error {
+  return ErrCouldNotOpen
+}
+// package bar
+if err := foo.Open(); err != nil {
+  if errors.Is(err, foo.ErrCouldNotOpen) {
+    // handle the error
+  } else {
+    panic("unknown error")
+  }
+}
+```
+
+</td></tr>
+</tbody></table>
+
+Đối với dynamic string error, dùng `fmt.Errorf` nếu không cần phải xử lý error đó, ngược lại, dùng một custom error.
+<table>
+<thead><tr><th>No error matching</th><th>Error matching</th></tr></thead>
+<tbody>
+<tr><td>
+
+```go
+// package foo
+func Open(file string) error {
+  return fmt.Errorf("file %q not found", file)
+}
+// package bar
+if err := foo.Open("testfile.txt"); err != nil {
+  // Can't handle the error.
+  panic("unknown error")
+}
+```
+
+</td><td>
+
+```go
+// package foo
+type NotFoundError struct {
+  File string
+}
+func (e *NotFoundError) Error() string {
+  return fmt.Sprintf("file %q not found", e.File)
+}
+func Open(file string) error {
+  return &NotFoundError{File: file}
+}
+// package bar
+if err := foo.Open("testfile.txt"); err != nil {
+  var notFound *NotFoundError
+  if errors.As(err, &notFound) {
+    // handle the error
+  } else {
+    panic("unknown error")
+  }
+}
+```
+
+</td></tr>
+</tbody></table>
+
+Có 3 cách để truyền error nếu hàm gọi bị lỗi:
+- Trả về error gốc
+- Thêm thông tin, ngữ cảnh với `fmt.Errorf` và `%w`
+- Thêm thông tin, ngữ cảnh với `fmt.Errorf` và `%v`
+
+
 
 
 To be continue...

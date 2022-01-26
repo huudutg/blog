@@ -12,7 +12,7 @@ const Feed = ({ edges }: Props) => {
   console.log("%c edges", "color: blue;", edges);
 
   const calculateReadingTime = (text: string) => {
-    const wpm = 300;
+    const wpm = 320;
     const words = text ? text.trim().split(/\s+/).length : 1000;
     return Math.ceil(words / wpm);
   };

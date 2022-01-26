@@ -4,6 +4,7 @@ import { getContactHref } from '../../../utils';
 import styles from './Author.module.scss';
 import { useSiteMetadata } from '../../../hooks';
 import Kofi from '../../Kofi';
+import Ghost from '../../Ghost';
 
 const Author = () => {
   const { author } = useSiteMetadata();
@@ -20,6 +21,7 @@ const Author = () => {
         >
           Follow <strong>Tui</strong> on Twitter
         </a>
+        <Ghost />
       </p>
     </div>
   );
