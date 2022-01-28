@@ -347,7 +347,7 @@ const (
 
 ### Errors
 Tùy vào mục đích và tình huống sử dụng, bạn nên cân nhắc các kiểu error và dùng cho phù hợp:
-- Nếu bạn cần xử lý một error cụ thể nào đó, chúng ta cần phải khai báo một top-level error hoặc một custom type error và sử dụng các hàm [`errors.Is`] hoặc [`errors.As`].
+- Nếu bạn cần xử lý một error cụ thể nào đó, chúng ta cần phải khai báo một top-level error hoặc một custom type error và kết hợp với các hàm [`errors.Is`] hoặc [`errors.As`].
 - Nếu error message là một static string, bạn có thể dùng `errors.New`, còn nếu là dynamic string thì dùng  `fmt.Errorf` hoặc một custom error.
 
 [`errors.Is`]: https://golang.org/pkg/errors/#Is
@@ -450,9 +450,100 @@ if err := foo.Open("testfile.txt"); err != nil {
 
 Có 3 cách để truyền error nếu hàm gọi bị lỗi:
 - Trả về error gốc
-- Thêm thông tin, ngữ cảnh với `fmt.Errorf` và `%w`
-- Thêm thông tin, ngữ cảnh với `fmt.Errorf` và `%v`
+- Thêm thông tin, context với `fmt.Errorf` và `%w`
+- Thêm thông tin, context với `fmt.Errorf` và `%v`
 
+Trả về error gốc khi bạn không thêm bất kỳ context nào, việc này sẽ giúp giữ nguyên type và message của error. Thích hợp cho các error có đầy đủ các thông tin cần thiết khi kiểm tra lỗi.
+
+Nếu bạn muốn thêm các thông tin khác vào error (VD: thay vì nhận được một error với message mơ hồ "connection refused", bạn sẽ nhận được "call service abc: connection refused") thì hãy dùng `fmt.Errorf` kết hợp với `%w` hoặc `%v`.
+
+- Dùng `%w` để wrap error lại và sau đó có thể upwrap với [errors.Unwrap](https://go.dev/blog/go1.13-errors), nhờ vậy mà chúng ta có thể xử lý error với `errors.Is` và `errors.As`.
+
+- Dùng `%v` sẽ không thể bắt được các error với các hàm `errors.Is` và `errors.As`.
+
+Khi thêm thông tin vào error, hạn chế dùng cụm từ "failed to", ví dụ:
+<table>
+<thead><tr><th>Bad</th><th>Good</th></tr></thead>
+<tbody>
+<tr><td>
+
+```go
+s, err := store.New()
+if err != nil {
+    return fmt.Errorf(
+        "failed to create new store: %w", err)
+}
+```
+
+</td><td>
+
+```go
+s, err := store.New()
+if err != nil {
+    return fmt.Errorf(
+        "new store: %w", err)
+}
+```
+
+</td></tr><tr><td>
+
+```
+failed to x: failed to y: failed to create new store: the error
+```
+
+</td><td>
+
+```
+x: y: new store: the error
+```
+
+</td></tr>
+</tbody></table>
+See also [Don't just check errors, handle them gracefully].
+
+  [`"pkg/errors".Cause`]: https://godoc.org/github.com/pkg/errors#Cause
+  [Don't just check errors, handle them gracefully]: https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully
+
+### Error Naming 
+Đối với các biến error global, sử dụng các prefix `Err` hoặc `err` (tùy theo bạn có muốn export nó hay không).
+```go
+var (
+  // The following two errors are exported
+  // so that users of this package can match them
+  // with errors.Is.
+  ErrBrokenLink = errors.New("link is broken")
+  ErrCouldNotOpen = errors.New("could not open")
+  // This error is not exported because
+  // we don't want to make it part of our public API.
+  // We may still use it inside the package
+  // with errors.Is.
+  errNotFound = errors.New("not found")
+)
+```
+
+Đối với các kiểu custom error, dùng suffix `Error`.
+
+```go
+// Similarly, this error is exported
+// so that users of this package can match it
+// with errors.As.
+type NotFoundError struct {
+  File string
+}
+func (e *NotFoundError) Error() string {
+  return fmt.Sprintf("file %q not found", e.File)
+}
+// And this error is not exported because
+// we don't want to make it part of the public API.
+// We can still use it inside the package
+// with errors.As.
+type resolveError struct {
+  Path string
+}
+func (e *resolveError) Error() string {
+  return fmt.Sprintf("resolve %q", e.Path)
+}
+```
 
 
 

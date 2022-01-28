@@ -3,14 +3,19 @@
 
 .container {
   position: absolute;
-  // bottom: 10%;
-  right: 25%;
-  // margin-left: -64.5px;
+  left: 65%;
   margin-top: -170px;
+  &:hover .shadow {
+  animation: shrink 0.1s ease-out infinite;
+  }
 }
 
 .ghost {
   animation: float 3s ease-out infinite;
+  &:hover {
+  animation: float 0.1s ease-out infinite;
+  }
+
 }
 
 @keyframes float {
