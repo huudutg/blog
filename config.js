@@ -28,6 +28,10 @@ module.exports = {
       path: 'https://unsplash.com/@notdu'
     },
     {
+      label: 'Today I Learned',
+      path: 'https://til.notdu.com/'
+    },
+    {
       label: 'Buy Me a Coffee',
       path: 'https://ko-fi.com/notdu'
     },

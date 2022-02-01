@@ -1,9 +1,9 @@
 ---
-title: How is your 2021?
+title: Này, 2021 của bạn thế nào?
 date: "2022-1-29"
 template: "post"
 draft: false
-slug: "how-is-your-2021"
+slug: "2021-cua-ban-the-nao"
 category: "YIR"
 tags:
   - "Year in review"
@@ -29,7 +29,7 @@ Mình bắt đầu dọn ra ***nội thành*** từ đầu năm 3 để học ti
 
 ![Old room](/media/2022/1/old-room.jpg)
 
-Ấy vậy mà tui mình vẫn ở đấy hơn 2 năm, có nhiều lý do từ khách quan cho tới chủ quan, nhưng lý do lớn nhất đó chính là do tụi mình lười chuyển chổ. Với lại ông bà ta có dạy "An cư thì mới lạc nghiệp", nên thôi, ~~ráng cũng được~~. Bọn mình ở với nhau rất hợp, từ chuyện ăn uống, vệ sinh chuồng trại cho đến chuyện học đều phối hợp khá là ăn ý. 
+Ấy vậy mà tụi mình vẫn ở đấy hơn 2 năm, có nhiều lý do từ khách quan cho tới chủ quan, nhưng lý do lớn nhất đó chính là do tụi mình lười chuyển chổ. Với lại ông bà ta có dạy "An cư thì mới lạc nghiệp", nên thôi, ~~ráng cũng được~~. Bọn mình ở với nhau rất hợp, từ chuyện ăn uống, vệ sinh chuồng trại cho đến chuyện học đều phối hợp khá là ăn ý. 
 
 Tháng 12 vừa rồi mình đã chuyển qua trọ mới, ở cùng với những đứa bạn cấp 3. Chuyển trọ có lẽ là lý do lớn nhất khiến cuộc sống của mình thay đổi khá nhiều. Từ lúc qua trọ mới cho đến hiện tại thì gần như trong phòng chỉ có mỗi mình mình do bạn mình vẫn còn ở quê chưa lên. Một trong những điều khiến mình thấy thích khi ở một mình đó là nấu ăn, mình có thể thỏa sức nấu các bữa ăn mà bản thân thích và "[ăn sạch](https://notdu.com/posts/2021/co-the-can-doi-bat-dau-tu-mot-bua-an)" nó.
 ### Nấu ăn
