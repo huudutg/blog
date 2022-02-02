@@ -79,6 +79,7 @@ Chất béo (lipid) đóng vai trò thiết yếu trong quá trình hấp thụ 
   Đây là loại chất béo gây tranh cãi khá nhiều, có nhiều nghiên cứu mới cho thấy thì chất béo bão hòa không phải là nguyên nhân gây nên béo phì. Nhưng với hiệp hội tim mạch Mỹ thì ngược lại và yêu cầu chỉ nên ăn dưới 10% lượng tiêu thụ mỗi ngày.
 
   + Chất béo chuyển hóa (Trans Fat): có thể làm tăng nồng độ LDL (cholesterol “xấu”) và giảm nồng độ lipoprotein tỷ trọng cao (HDL) (cholesterol “tốt”). Nguồn thực phẩm chứa chất béo chuyển hóa bao gồm: *bánh quy, bánh ngọt, bánh rán, thực phẩm chiên, đồ ăn vặt chế biến sẵn,...*
+  
 -- Chất béo "tốt": có lợi cho sức khỏe, tốt cho tim mạch, bao gồm:
   + Chất béo không bão hòa đơn (Monounsaturated Fat): có thể cải thiện nồng độ cholesterol trong máu và giảm nguy cơ mắc bệnh tim mạch, có trong *bơ, bơ đậu phộng và bơ hạnh nhân, các loại hạt quả hạch (hạnh nhân, hạt điều, quả phỉ và quả hồ đào), dầu thực vật (dầu ô liu, dầu cải dầu và dầu đậu phộng),...*
   + Chất béo không bão hòa đa (Polyunsaturated Fat): còn được gọi là “chất béo thiết yếu”, rất quan trọng đối với sức khỏe vì cơ thể không thể tự sản sinh ra mà phải hấp thụ từ thực phẩm. Tương tự như chất béo không bão hòa đơn, chất béo không bão hòa đa làm giảm nguy cơ mắc bệnh tim mạch thông qua giảm nồng độ cholesterol trong máu. Loại chất béo này có trong *đậu tương rang và bơ hạt đậu nành, hạt hướng dương, hạt bí ngô, hạt vừng, dầu thực vật (dầu ngô, dầu hoa rum, dầu vừng và dầu hướng dương), các loại hạt quả hạch (quả óc chó, quả hồ đào, hạt quả hạch Brazil và hạt thông),...*
