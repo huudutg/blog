@@ -1,0 +1,11 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.info {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+

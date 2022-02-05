@@ -22,12 +22,11 @@ const PostTemplate = ({ data }: Props) => {
   const { frontmatter } = data.markdownRemark;
   const {
     title: postTitle,
-    description: postDescription = "",
+    description: postDescription,
     socialImage,
   } = frontmatter;
   const metaDescription = postDescription || siteSubtitle;
   const socialImageUrl = socialImage;
-  console.log("%c data", "color: blue;", data);
   return (
     <Layout
       title={`${postTitle} - ${siteTitle}`}

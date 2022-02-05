@@ -1,0 +1,113 @@
+@use "sass:math";
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.content {
+  max-width: $layout-post-single-width;
+  padding: 0 15px;
+  margin: 0  auto;
+  margin-top: 30px;
+
+  &__title {
+    font-size: $typographic-base-font-size * 2;
+    max-width: $layout-post-width;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+    // text-align: center;
+    @include line-height(1.65);
+    @include margin-top(2.4);
+  }
+  &__description{
+     max-width: $layout-post-width;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    font-weight: 200;
+    color: #A0AFC0;
+    font-style: italic;
+     -webkit-text-stroke-width: 1.3px;
+     margin-bottom: 20px;
+  }
+
+  &__body {
+    & figure {
+      @include margin-bottom(1);
+
+      & blockquote {
+        font-style: italic;
+        text-align: center;
+        margin-top: 0;
+        @include padding(1, 0);
+
+        & p {
+          max-width: $layout-post-width;
+          font-size: $typographic-base-font-size * 1.6817;
+          margin-top: 0;
+          @include margin-bottom(1);
+          @include line-height(1.5)
+        }
+
+      }
+
+    }
+
+    & a {
+      text-decoration: underline
+    }
+
+    & * {
+      max-width: $layout-post-width;
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    & img {
+      max-width: 100%;
+    }
+
+    & td {
+      max-width: math.div($layout-post-width, 2);
+    }
+    & code {
+      font-size: 85%!important;
+    }
+    & ul, ol{
+      padding-left: 20px!important;
+    }
+
+  }
+   & .gatsby-highlight {
+      font-size: 85%!important;
+    }
+
+}
+
+
+@include breakpoint-md {
+  .content {
+    // padding: 0;
+
+    &__title {
+      font-size: $typographic-base-font-size * 3;
+      @include line-height(2.25);
+      @include margin-top(2.25);
+      @include margin-bottom(0.5)
+    }
+
+    &__body {
+      font-size: $typographic-base-font-size * 1.125;
+      @include line-height(1.125);
+      @include margin-bottom(0.5);
+
+      & p {
+        font-size: $typographic-base-font-size * 1.125;
+        @include line-height(1.125);
+        @include margin-bottom(0.5)
+      }
+
+    }
+
+  }
+
+}

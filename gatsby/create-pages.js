@@ -37,6 +37,7 @@ const createPages = async ({ graphql, actions }) => {
           node {
             frontmatter {
               template
+              uid
             }
             fields {
               slug
@@ -61,6 +62,12 @@ const createPages = async ({ graphql, actions }) => {
         path: edge.node.fields.slug,
         component: path.resolve('./src/templates/post-template.tsx'),
         context: { slug: edge.node.fields.slug }
+      });
+    } else if (_.get(edge, 'node.frontmatter.template') === 'info') {
+      createPage({
+        path: `/${edge.node.frontmatter.uid}`,
+        component: path.resolve('./src/templates/info-template.tsx'),
+        context: { uid: edge.node.frontmatter.uid }
       });
     }
   });

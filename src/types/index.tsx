@@ -34,8 +34,33 @@ export type Node = {
     category?: string,
     tags?: string[],
     title: string,
-    socialImage?:  string
+    socialImage?: string,
     thumbnail: string
+  },
+  html: string,
+  id: string
+};
+
+export type NodeInfo = {
+  frontmatter: {
+    uid: string,
+    title?: string,
+    name: string,
+    photo: string,
+    bio?: string,
+    email?: string,
+    facebook?: string,
+    telegram?: string,
+    twitter?: string,
+    github?: string,
+    linkedin?: string,
+    instagram?: string,
+    youtube?: string,
+    phone?: string,
+    momo?: string,
+    bank?: string,
+    stk?: string,
+    tiktok?: string,
   },
   html: string,
   id: string
