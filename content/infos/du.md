@@ -2,7 +2,7 @@
 uid: du
 title: Dự nè
 template: info
-name: Huỳnh Hửu Dự  
+name: Huỳnh Hửu Dự 2 
 photo: /avatar.png
 bio: You shouldn't sell your youth to serve your dreams
 facebook: huudutg
@@ -14,8 +14,8 @@ telegram: huudutg
 github: notdu
 linkedin: huudutg
 youtube: UCc02nJGgKGQbQMe1AhUZwLg
-momo: 0984560752
+momo: notdu
 bank: MB Bank
 stk: 0984560752
-tiktok: " "
+tiktok: notdu.com
 ---

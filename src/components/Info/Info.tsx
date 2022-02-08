@@ -9,8 +9,6 @@ type Props = {
   info: NodeInfo
 };
 
-
-
 const Info = ({ info }: Props) => {
   // const { html } = info;
   // eslint-disable-next-line max-len
@@ -30,7 +28,6 @@ const Info = ({ info }: Props) => {
     momo: profile.momo,
     tiktok: profile.tiktok,
   };
-
 
   return (
     <div className={styles["info"]}>
