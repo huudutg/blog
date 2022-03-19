@@ -2,7 +2,7 @@
 const getContactHref = (name: string, contact: string) => {
   let href;
 
-  switch (name) {
+  switch (name.toLowerCase()) {
     case "twitter":
       href = `https://www.twitter.com/${contact}`;
       break;
