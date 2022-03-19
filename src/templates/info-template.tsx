@@ -48,7 +48,6 @@ export const pageQuery = graphql`
   query MyQuery($uuid: String!) {
     mongodbNotduInfos(uuid: { eq: $uuid }) {
     bio
-    createdAt
     email
     name
     avatar
