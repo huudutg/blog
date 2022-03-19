@@ -2,6 +2,10 @@
 
 const siteConfig = require('./config.js');
 const postCssPlugins = require('./postcss-config.js');
+require('dotenv')
+  .config({
+    path: `.env`,
+  });
 
 module.exports = {
   pathPrefix: siteConfig.pathPrefix,
@@ -58,7 +62,12 @@ module.exports = {
           }
         `,
         feeds: [{
-          serialize: ({ query: { site, allMarkdownRemark } }) => (
+          serialize: ({
+            query: {
+              site,
+              allMarkdownRemark
+            }
+          }) => (
             allMarkdownRemark.edges.map((edge) => ({
               ...edge.node.frontmatter,
               description: edge.node.frontmatter.description,
@@ -173,7 +182,10 @@ module.exports = {
           }
         `,
         output: '/sitemap.xml',
-        serialize: ({ site, allSitePage }) => allSitePage.edges.map((edge) => ({
+        serialize: ({
+          site,
+          allSitePage
+        }) => allSitePage.edges.map((edge) => ({
           url: site.siteMetadata.siteUrl + edge.node.path,
           changefreq: 'daily',
           priority: 0.7
@@ -257,5 +269,27 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography',
       },
     },
+    { // The name of the plugin
+      resolve: `gatsby-source-mongodb`,
+      options: {
+        // Name of the database and collection where are books reside
+        dbName: `notdu`,
+        collection: 'infos',
+        server: {
+          address: 'funretrodb-shard-00-00.yxfs7.mongodb.net',
+          port: 27017
+        },
+        auth: {
+          user: 'huudutg',
+          password: 'huudutg'
+        },
+        extraParams: {
+          replicaSet: 'funretrodb-shard-00-00',
+          ssl: true,
+          authSource: `admin`,
+          retryWrites: true
+        }
+      }
+    }
   ]
 };

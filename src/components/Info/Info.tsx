@@ -1,46 +1,27 @@
 // @flow strict
 import React from 'react';
 import styles from './Info.module.scss';
-import type { NodeInfo } from '../../types';
 import Avatar from './Avatar';
 import Card from './Card/Card';
+import { IInfo } from "../../templates/info-template";
 
 type Props = {
-  info: NodeInfo
+    info: IInfo
 };
 
-const Info = ({ info }: Props) => {
-  // const { html } = info;
-  // eslint-disable-next-line max-len
-  // const { uid, title, name, photo, bio, email, facebook, telegram, twitter, github, linkedin, instagram, youtube, momo, bank, stk } = info.frontmatter;
-  const profile = info.frontmatter;
-
-  const data = {
-    facebook: profile.facebook,
-    instagram: profile.instagram,
-    email: profile.email,
-    phone: profile.phone,
-    twitter: profile.twitter,
-    telegram: profile.telegram,
-    github: profile.github,
-    linkedin: profile.linkedin,
-    youtube: profile.youtube,
-    momo: profile.momo,
-    tiktok: profile.tiktok,
-  };
-
-  return (
+const Info = ({ info }: Props) => (
     <div className={styles["info"]}>
-      <Avatar photo={profile.photo} bio={profile.bio} name={profile.name} />
-      <div className={styles["container"]}>
-        {
-          Object.keys(data).map((key) => (
-        <Card name={key} img={`${key}.png`} url={data[key]} />
-          ))
-        }
-      </div>
+        <Avatar photo={info.avatar} bio={info.bio} name={info.name}/>
+        <div className={styles["container"]}>
+            {info.list
+                && info.list.map((value, index) => (
+                    <Card key={index} name={value.name} url={value.url}/>
+                ))}
+            <a href={`https://edit.notdu.com/info/${info.uuid}`} className={styles["button_create"]}>
+                Edit Information
+            </a>
+        </div>
     </div>
-  );
-};
+);
 
 export default Info;

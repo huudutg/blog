@@ -1,64 +1,64 @@
 // @flow strict
 import React from "react";
+// @ts-ignore
 import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import Post from "../components/Post";
 import { useSiteMetadata } from "../hooks";
-import type { MarkdownRemark, NodeInfo } from "../types";
 import Info from "../components/Info";
-import LayoutInfo from '../components/Layout/LayoutInfo';
+import LayoutInfo from "../components/Layout/LayoutInfo";
 
 type Props = {
-  data: {
-    markdownRemark: NodeInfo;
-  };
+    data: {
+        mongodbNotduInfos: IInfo;
+    };
+};
+
+export type IInfo = {
+    mongodb_id?: string;
+    uuid: string;
+    email?: string;
+    password?: string;
+    name?: string;
+    bio?: string;
+    avatar?: string;
+    hash?: string;
+    list: Item[];
+};
+
+type Item = {
+    name: string;
+    url: string;
 };
 
 const InfoTemplate = ({ data }: Props) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
-  const { frontmatter } = data.markdownRemark;
-  const {
-    title: postTitle,
-    bio
-  } = frontmatter;
-  const metaDescription = bio || siteSubtitle;
-  const socialImageUrl = "";
-  console.log('%c data', 'color: blue;', data);
+  const { title: siteTitle } = useSiteMetadata();
+  const info: IInfo = data.mongodbNotduInfos;
+  console.log('%c 111', 'color: blue;', process.env.ENABLE_GATSBY_REFRESH_ENDPOINT);
   return (
-    <LayoutInfo
-      title={`${postTitle} - ${siteTitle}`}
-      description={metaDescription}
-      socialImage={socialImageUrl || ""}
-    >
-      <Info info={data.markdownRemark} />
-    </LayoutInfo>
+        <LayoutInfo
+            title={`${info.name} - ${siteTitle}`}
+            description={info.bio}
+            socialImage={""}
+        >
+            <Info info={info}/>
+        </LayoutInfo>
   );
 };
 
-export const query = graphql`
-  query InfoByUID($uid: String!) {
-    markdownRemark(frontmatter: { uid: { eq: $uid } }) {
-      id
-      frontmatter {
-        uid
-        title
-        name
-        photo
-        bio
-        email
-        facebook
-        telegram
-        twitter
-        github
-        linkedin
-        instagram
-        youtube
-        phone
-        momo
-        bank
-        stk
-        tiktok
-      }
+export const pageQuery = graphql`
+  query MyQuery($uuid: String!) {
+    mongodbNotduInfos(uuid: { eq: $uuid }) {
+    bio
+    createdAt
+    email
+    name
+    avatar
+    title
+    uuid
+    list {
+      name
+      url
+    }
+    mongodb_id
     }
   }
 `;

@@ -6,6 +6,26 @@
   justify-content: center;
   text-align: center;
   flex-direction: column;
+  padding-bottom: 50px;
 }
 
 
+.button_create {
+  font-size: 0.875rem;
+  font-weight: 600;
+  gap: 1em;
+  list-style: none;
+  margin: 10px 0;
+  width: 60%;
+  background-image: linear-gradient(135deg, #ae1fd1, #bf2f9a);
+  border: 1px solid #951fae;
+  background-color: #171717;
+  border-radius: 1em;
+  color: #fcfcfc;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.875em 1.25em;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+  max-width: 500px;
+}

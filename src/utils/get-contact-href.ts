@@ -68,4 +68,61 @@ const getContactHref = (name: string, contact: string) => {
   return href;
 };
 
+export const getContactURL = (name: string) => {
+  let href;
+
+  switch (name) {
+    case "Twitter":
+      href = `https://www.twitter.com/`;
+      break;
+    case "Github":
+      href = `https://github.com/`;
+      break;
+    case "Vkontakte":
+      href = `https://vk.com/`;
+      break;
+    case "Telegram":
+      href = `https://t.me/`;
+      break;
+    case "Linkedin":
+      href = `https://www.linkedin.com/in/`;
+      break;
+    case "Instagram":
+      href = `https://www.instagram.com/`;
+      break;
+    case "Facebook":
+      href = `https://www.facebook.com/`;
+      break;
+    case "Gitlab":
+      href = `https://www.gitlab.com/`;
+      break;
+    case "Weibo":
+      href = `https://www.weibo.com/`;
+      break;
+    case "Codepen":
+      href = `https://www.codepen.io/`;
+      break;
+    case "Youtube":
+      href = `https://www.youtube.com/channel/`;
+      break;
+    case "Soundcloud":
+      href = `https://soundcloud.com/`;
+      break;
+    case "Medium":
+      href = `https://medium.com/`;
+      break;
+    case "Momo":
+      href = `https://me.momo.vn/`;
+      break;
+    case "Tiktok":
+      href = `https://www.tiktok.com/@`;
+      break;
+    default:
+      href = "";
+      break;
+  }
+
+  return href;
+};
+
 export default getContactHref;
