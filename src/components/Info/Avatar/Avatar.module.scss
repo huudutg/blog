@@ -3,13 +3,14 @@
 
 .avatar {
   margin-top: 50px;
-   text-align: center;
+  text-align: center;
+
   &__photo {
     display: inline-block;
     margin-bottom: 0;
     border-radius: 50%;
     background-clip: padding-box;
-    
+
   }
 
   &__title {
@@ -22,6 +23,7 @@
     &-link {
       color: white;
       font-size: 22px;
+
       &:hover,
       &:focus {
         color: white
@@ -32,6 +34,8 @@
   }
 
   &__subtitle {
+    max-width: 500px;
+    margin: auto;
     white-space: pre-line;
     // color: $color-gray;
     color: rgb(136, 133, 133);
@@ -41,49 +45,57 @@
 
 }
 
-.container{
+.container {
   width: 100%;
-	// height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  // height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   .author2 {
-      width: 120px;
+    width: 120px;
     height: 120px;
     box-sizing: border-box;
     border: 5px white solid;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     transform: translatey(0px);
     animation: float 6s ease-in-out infinite;
-    img { width: 100%; height: auto; }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
 
   }
+
   span a {
-	font-size: 18px;
-	color: #cccccc;
-	text-decoration: none;
-	margin: 0 10px;
-	transition: all 0.4s ease-in-out;
-	&:hover {
-		color: #ffffff;
-	}
-}
-@keyframes float {
-	0% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-	50% {
-		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
-		transform: translatey(-20px);
-	}
-	100% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-}
+    font-size: 18px;
+    color: #cccccc;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
+  @keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      transform: translatey(0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+      transform: translatey(-20px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      transform: translatey(0px);
+    }
+  }
 }
 

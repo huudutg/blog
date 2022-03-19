@@ -6,7 +6,10 @@ const createCategoriesPages = require('./pagination/create-categories-pages.js')
 const createTagsPages = require('./pagination/create-tags-pages.js');
 const createPostsPages = require('./pagination/create-posts-pages.js');
 
-const createPages = async ({ graphql, actions }) => {
+const createPages = async ({
+  graphql,
+  actions
+}) => {
   const { createPage } = actions;
 
   // 404
@@ -26,6 +29,27 @@ const createPages = async ({ graphql, actions }) => {
     path: '/categories',
     component: path.resolve('./src/templates/categories-list-template.tsx')
   });
+
+  const { data } = await graphql(`
+    {
+      allMongodbNotduInfos {
+          edges {
+            node {
+              uuid
+            }
+          }
+      }
+    }
+  `);
+
+  // eslint-disable-next-line no-restricted-syntax
+  for (const { node } of data.allMongodbNotduInfos.edges) {
+    createPage({
+      path: `/${node.uuid}`,
+      component: path.resolve('./src/templates/info-template.tsx'),
+      context: { uuid: node.uuid },
+    });
+  }
 
   // Posts and pages from markdown
   const result = await graphql(`
@@ -62,12 +86,6 @@ const createPages = async ({ graphql, actions }) => {
         path: edge.node.fields.slug,
         component: path.resolve('./src/templates/post-template.tsx'),
         context: { slug: edge.node.fields.slug }
-      });
-    } else if (_.get(edge, 'node.frontmatter.template') === 'info') {
-      createPage({
-        path: `/${edge.node.frontmatter.uid}`,
-        component: path.resolve('./src/templates/info-template.tsx'),
-        context: { uid: edge.node.frontmatter.uid }
       });
     }
   });
