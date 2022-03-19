@@ -29,10 +29,10 @@ type Item = {
     url: string;
 };
 
-const InfoTemplate = async ({ data }: Props) => {
+const InfoTemplate = ({ data }: Props) => {
   const { title: siteTitle } = useSiteMetadata();
   const info: IInfo = data.mongodbNotduInfos;
-  await fetch('/__refresh', {
+  fetch('/__refresh', {
     method: 'POST', // or 'PUT'
   });
   return (
