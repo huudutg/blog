@@ -29,10 +29,12 @@ type Item = {
     url: string;
 };
 
-const InfoTemplate = ({ data }: Props) => {
+const InfoTemplate = async ({ data }: Props) => {
   const { title: siteTitle } = useSiteMetadata();
   const info: IInfo = data.mongodbNotduInfos;
-  console.log('%c 111', 'color: blue;', process.env.ENABLE_GATSBY_REFRESH_ENDPOINT);
+  await fetch('/__refresh', {
+    method: 'POST', // or 'PUT'
+  });
   return (
         <LayoutInfo
             title={`${info.name} - ${siteTitle}`}
