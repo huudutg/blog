@@ -2,6 +2,7 @@
 import React from "react";
 // @ts-ignore
 import { graphql } from "gatsby";
+// import axios from 'axios';
 import { useSiteMetadata } from "../hooks";
 import Info from "../components/Info";
 import LayoutInfo from "../components/Layout/LayoutInfo";
@@ -32,9 +33,8 @@ type Item = {
 const InfoTemplate = ({ data }: Props) => {
   const { title: siteTitle } = useSiteMetadata();
   const info: IInfo = data.mongodbNotduInfos;
-  fetch('/__refresh', {
-    method: 'POST', // or 'PUT'
-  });
+  // axios.post('/__refresh');
+
   return (
         <LayoutInfo
             title={`${info.name} - ${siteTitle}`}
