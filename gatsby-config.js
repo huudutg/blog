@@ -3,6 +3,11 @@
 const siteConfig = require('./config.js');
 const postCssPlugins = require('./postcss-config.js');
 
+require('dotenv')
+  .config({
+    path: `.env`,
+  });
+
 module.exports = {
   pathPrefix: siteConfig.pathPrefix,
   siteMetadata: {
