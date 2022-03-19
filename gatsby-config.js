@@ -2,10 +2,6 @@
 
 const siteConfig = require('./config.js');
 const postCssPlugins = require('./postcss-config.js');
-require('dotenv')
-  .config({
-    path: `.env.production`,
-  });
 
 module.exports = {
   pathPrefix: siteConfig.pathPrefix,
