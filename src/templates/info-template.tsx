@@ -50,7 +50,6 @@ export const pageQuery = graphql`
     email
     name
     avatar
-    title
     uuid
     list {
       name
