@@ -75,10 +75,38 @@ Note:
 ![Hammer Curl Dumbell](/media/2022/9/hammer-curl-dumbell.gif)
 
 
+## Push #1
+### Incline Benchpress With Barbell - 5 5 PF
+![Incline Benchpress With Barbell](/media/2022/9/incline-benchpress-with-barbell.gif)
+### Flat Benchpress With Dumbell - 3 12 P
+![Flat Benchpress With Dumbell](/media/2022/9/flat-benchpress-with-dumbell.gif)
+### Fly With Dumbell - 2 8-12 RP
+![Fly With Dumbell](/media/2022/9/fly-with-dumbell.gif)
+### Lateral Raises With Dumbell - 2 8-12 RP
+![Lateral Raises With Dumbell](/media/2022/9/lateral-raises-with-dumbell.gif)
+### French-Press - 4 10 P
+![French-Press](/media/2022/9/french-press.gif)
+### Triceps Cable Pushdown - 2 8-12 RP
+![Triceps Cable Pushdown](/media/2022/9/triceps-cable-pushdown.gif)
+
+
+## Push #2
+### Military Press - 4 5 PF
+![Military Press](/media/2022/9/military-press.gif)
+### Flat Benchpress With Barbell - 4 12-8 SP
+![Flat Benchpress With Barbell](/media/2022/9/flat-benchpress-with-barbell.gif)
+### Dips - 4 max P
+![Dips](/media/2022/9/dips.gif)
+### Bench Over Reverse Fly - 4 10 P
+![Bench Over Reverse Fly](/media/2022/9/bench-over-reverse-fly.gif)
+### Seated Overhead Triceps Push With Dumbell - 4 10 P
+![Seated Overhead Triceps Push With Dumbell](/media/2022/9/seated-overhead-triceps-push-with-dumbell.gif)
+### Triceps Cable Pushdown - 2 8-12 RP
+![Triceps Cable Pushdown](/media/2022/9/triceps-cable-pushdown.gif)
+
+
 
 ### References
 
-1. [Effective Go](https://golang.org/doc/effective_go.html)
-2. [Go Common Mistakes](https://github.com/golang/go/wiki/CommonMistakes)
-3. [Go Code Review Comments](https://github.com/golang/go/wiki/CodeReviewComments)
-4. [Uber Go Style Guide](https://github.com/uber-go/guide/blob/master/style.md)
+1. [Swequity](https://www.youtube.com/c/Swequityfitness/featured)
+2. [Vegan coach](https://www.youtube.com/channel/UC9CAcMiH3TG3Qo8oaR1Xg_A)
