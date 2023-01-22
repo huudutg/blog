@@ -64,7 +64,7 @@ Tóc tôi - tóc tôi đã xoăn tít hơn bao giờ hết nhờ một người 
 
 Tôi vẫn còn chơi bóng rổ hàng tuần nhưng tôi vẫn gà.
 
-![bóng rổ](/media/2023/1/bong-ro.JPG)
+![bóng rổ](/media/2023/1/bong-ro.png)
 
 Tôi có tham gia thêm bộ môn bóng đá vào mỗi thứ 5 hàng tuần nữa nhưng cũng giống bóng rổ, tôi gà. Có lẽ là do tôi thích mấy môn đồng đội, anh em xã hội các kiểu nên vẫn tìm được niềm vui khi chơi mà không cần phải chiến thắng :v (hoặc ít nhất là tôi nghĩ thế).
 ![bóng đá](/media/2023/1/bong-da.JPG)
