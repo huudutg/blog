@@ -9,6 +9,7 @@ tags:
   - "Authorization"
   - "Fossil"
   - "Microservice"
+  - 2023
 description: Quản lý quyền truy cập đóng vai trò vô cùng quan trọng trong việc bảo mật hệ thống và dữ liệu của người dùng. Tuy nhiên, việc thực hiện phân quyền trong các ứng dụng phức tạp lại không phải là điều đơn giản. Để giải quyết vấn đề này, nhiều thư viện phân quyền đã được phát triển như OPA, Keycloak, Shiro,...  và Casbin chính là một ứng cử viên nổi bậc trong số đó.
 socialImage: media/2023/4/golang-casbin.svg
 thumbnail: media/2023/4/golang-casbin.svg
@@ -25,6 +26,7 @@ Casbin là một thư viện phân quyền được sử dụng để quản lý
 
 Trong Casbin, một mô hình phân quyền được trừu tượng hóa thành file .CONF dựa trên mô hình PERM (Policy, Effect, Request, Matchers). Vì vậy, việc thay đổi hoặc nâng cấp cơ chế phân quyền chỉ đơn giản là sửa đổi file .CONF.
 
+`model.conf`
 ```sql
 # Request definition
 [request_definition]
@@ -43,6 +45,7 @@ e = some(where (p.eft == allow))
 m = r.sub == p.sub && r.obj == p.obj && r.act == p.act
 ```
 
+`policy.csv`
 ```sql
 p, alice, data1, read
 p, bob, data2, write
@@ -88,7 +91,7 @@ Tuy nhiên, Casbin không hỗ trợ:
 
 ### Cách dùng
 
-#### 1. Khởi tạo `enforce` với model và policy:
+#### 1. Khởi tạo `enforcer` với model và policy:
 
 ```sql
 e, _ := casbin.NewEnforcer("path/to/model.conf", "path/to/policy.csv")
@@ -96,7 +99,7 @@ e, _ := casbin.NewEnforcer("path/to/model.conf", "path/to/policy.csv")
 
 Bạn cũng có thể khởi tạo `enforcer` với policy được lưu trong Database thay vì file, xem phần [Policy-persistence](https://github.com/casbin/casbin#policy-persistence).
 
-#### 2. Dùng enforce hook để kiểm tra quyền ngay trước khi một `action/operation` nào đó diễn ra.
+#### 2. Dùng enforcer hook để kiểm tra quyền ngay trước khi một `action/operation` nào đó diễn ra.
 
 ```sql
 sub := "alice" // user muốn tham quan resource.

@@ -2,19 +2,20 @@
 title: My 3-day Split Workout Routine
 date: "2022-9-4"
 template: "post"
-draft: false 
+draft: false
 slug: "workout-routine"
 category: "Health"
 tags:
   - "Health"
   - "Workout Routine"
+  - 2022
 description: There are various ways to create your own training plan (Push-pull-leg, Full body, Upper-Lower,...), but Push-pull-leg is the one I prefer.
 thumbnail: media/2022/9/gopher-gym.jpg
 
 ---
 My 3-day Split Workout Routine
 
-Note: 
+Note:
 - **Progression** (P): stay the same weight in every set
 - **Progression with main focus** (PF): just like progression, but you must focus
 - **Standard Pyramid** (SP): increase the weight and decrease the reps for each set
