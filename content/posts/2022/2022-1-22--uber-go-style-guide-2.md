@@ -8,6 +8,7 @@ category: "Golang"
 tags:
   - "Golang"
   - "Style guide"
+  - "2022"
 description: Một vài quy ước khi code golang giúp code của mình dễ đọc, quản lý và nâng cấp hơn.
 socialImage: "/media/2021/12/fast-food.png"
 thumbnail: media/2022/1/uber-styles-guide.png
@@ -504,7 +505,7 @@ See also [Don't just check errors, handle them gracefully].
   [`"pkg/errors".Cause`]: https://godoc.org/github.com/pkg/errors#Cause
   [Don't just check errors, handle them gracefully]: https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully
 
-### Error Naming 
+### Error Naming
 Đối với các biến error global, sử dụng các prefix `Err` hoặc `err` (tùy theo bạn có muốn export nó hay không).
 ```go
 var (

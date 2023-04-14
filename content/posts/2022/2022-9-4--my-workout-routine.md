@@ -8,7 +8,7 @@ category: "Health"
 tags:
   - "Health"
   - "Workout Routine"
-  - 2022
+  - "2022"
 description: There are various ways to create your own training plan (Push-pull-leg, Full body, Upper-Lower,...), but Push-pull-leg is the one I prefer.
 thumbnail: media/2022/9/gopher-gym.jpg
 

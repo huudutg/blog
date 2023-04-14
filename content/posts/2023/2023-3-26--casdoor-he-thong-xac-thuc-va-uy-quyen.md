@@ -9,7 +9,7 @@ tags:
   - "iam"
   - "Casdoor"
   - "SSO"
-  - 2023
+  - "2023"
 description: Một UI-first Identity Access Management (IAM) / Single-Sign-On (SSO) platform hỗ trợ OAuth 2.0, OIDC, SAML and CAS, được tích hợp với Casbin - một thư viện quản lý quyền hỗ trợ mô hình RBAC và ABAC.
 socialImage: media/2023/4/casdoor.png
 thumbnail: media/2023/4/casdoor.png

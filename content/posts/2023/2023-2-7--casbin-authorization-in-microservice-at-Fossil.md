@@ -9,7 +9,7 @@ tags:
   - "Authorization"
   - "Fossil"
   - "Microservice"
-  - 2023
+  - "2023"
 description: Quản lý quyền truy cập đóng vai trò vô cùng quan trọng trong việc bảo mật hệ thống và dữ liệu của người dùng. Tuy nhiên, việc thực hiện phân quyền trong các ứng dụng phức tạp lại không phải là điều đơn giản. Để giải quyết vấn đề này, nhiều thư viện phân quyền đã được phát triển như OPA, Keycloak, Shiro,...  và Casbin chính là một ứng cử viên nổi bậc trong số đó.
 socialImage: media/2023/4/golang-casbin.svg
 thumbnail: media/2023/4/golang-casbin.svg

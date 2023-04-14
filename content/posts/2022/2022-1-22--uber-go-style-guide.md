@@ -8,7 +8,7 @@ category: "Golang"
 tags:
   - "Golang"
   - "Style guide"
-  - 2022
+  - "2022"
 description: Một vài quy ước khi code golang giúp code của mình dễ đọc, quản lý và nâng cấp hơn.
 socialImage: "/media/2021/12/fast-food.png"
 thumbnail: media/2022/1/uber-styles-guide.png
