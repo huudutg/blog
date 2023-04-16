@@ -4,7 +4,7 @@ date: "2022-9-4"
 template: "post"
 draft: false
 slug: "workout-routine"
-category: "Health"
+category: "Healthy"
 tags:
   - "Health"
   - "Workout Routine"
