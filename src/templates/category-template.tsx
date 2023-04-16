@@ -47,17 +47,11 @@ const CategoryTemplate = ({ data, pageContext }: Props) => {
 export const query = graphql`
   query CategoryPage($category: String, $postsLimit: Int!, $postsOffset: Int!) {
     allMarkdownRemark(
-      limit: $postsLimit
-      skip: $postsOffset
-      filter: {
-        frontmatter: {
-          category: { eq: $category }
-          template: { eq: "post" }
-          draft: { ne: true }
-        }
-      }
-      sort: { order: DESC, fields: [frontmatter___date] }
-    ) {
+        limit: $postsLimit,
+        skip: $postsOffset,
+        filter: { frontmatter: { category: { eq: $category }, template: { eq: "post" }, draft: { ne: true } } },
+        sort: { order: DESC, fields: [frontmatter___date] }
+      ){
       edges {
         node {
           fields {
