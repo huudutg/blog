@@ -1,4 +1,5 @@
 // @flow strict
+import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
@@ -63,6 +64,7 @@ export const query = graphql`
             description
             category
             title
+            thumbnail
           }
         }
       }
